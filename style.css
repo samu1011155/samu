@@ -1,0 +1,117 @@
+/* Base styles */
+body, h1, p {
+    font-family: 'Roboto', sans-serif; /* Default font */
+}
+
+/* Language-specific styles */
+body[lang="ar"] {
+    direction: rtl;
+    text-align: right;
+}
+
+body[lang="fr"] {
+    direction: ltr;
+    text-align: left;
+}
+
+/* Layout styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4f4;
+}
+
+.logo {
+    height: 40px; /* Adjust the size as needed */
+    width: auto;
+    margin-inline-start: 10px; /* Provides spacing between the logo and title for both LTR and RTL */
+    vertical-align: middle; /* Aligns the logo with the title text */
+}
+
+header {
+    background-color: #007BFF;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; /* Centers the logo and title horizontally */
+    align-items: center; /* Centers the logo and title vertically */
+}
+
+.card-container {
+    width: 100%;
+    max-width: 350px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+footer {
+    background-color: #007BFF;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+header h1 {
+    margin: 10;
+    font-size: 18px;
+}
+
+.service-info {
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.service-info h2 {
+    color: #333333;
+    font-size: 16px;
+}
+
+footer {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    .card-container {
+        margin: 5px;
+        width: calc(100% - 20px);
+    }
+}
+
+/* Language toggle styles (unchanged) */
+.language-toggle {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Adjust margin as needed */
+    position: fixed; /* Fix the toggle bar at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Span the entire width */
+    z-index: 10; /* Ensure the toggle bar stays above other content */
+}
+
+.language-toggle button {
+    padding: 5px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #ccc;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.language-toggle button.active {
+    background-color: #007BFF; /* Active button color */
+}
+
+

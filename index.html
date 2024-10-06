@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vérification de la carte professionnelle</title>
+    <link rel="stylesheet" href="style.css">
+    
+   
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Include Papa Parse library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+</head>
+<body>
+    <div class="language-toggle">
+        <button id="btnFR" onclick="setLanguage('fr')">Français</button>
+        <button id="btnAR" onclick="setLanguage('ar')">العربية</button>
+    </div>
+    
+    <div class="card-container">
+        <header>
+            <img src="logo.jpeg" alt="Logo du Service Médical d'Urgence" class="logo">
+            <h1 class="lang" data-fr="Vérification de la carte professionnelle" data-ar="بطاقة التحقق من الخدمة"></h1>
+        </header>
+        <section class="service-info" id="userInfo">
+            <p class="lang" data-fr="Chargement des données..." data-ar="جاري تحميل البيانات..."></p>
+        </section>
+        <footer>
+            <p id="verificationStatus" class="lang" data-fr="Vérification en cours..." data-ar="جاري التحقق..."></p>
+        </footer>
+    </div>
+    <script src="verify.js"></script>
+</body>
+</html>
